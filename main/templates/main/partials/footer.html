@@ -1,0 +1,24 @@
+{% load static %}
+<!-- ================================
+Start Footer
+================================= -->
+<footer>
+    <div class="footerCol">
+    <div class="container">
+        <ul class="socialCol">
+            {% for foo in footers %}
+        <li><a href="{{ foo.facebook }}"><img src="{% static 'images/fb.svg' %}" alt="..."></a></li>
+        <li><a href="{{ foo.instagram }}"><img src="{% static 'images/insta.svg' %}" alt="..."></a></li>
+        <li><a href="{{ foo.twitter }}"><img src="{% static 'images/twitter.svg' %}" alt="..."></a></li>
+        <li><a href="{{ foo.linkedin }}"><img src="{% static 'images/linkedin.svg' %}" alt="..."></a></li>
+            {% endfor %}
+        </ul>
+        <div class="copyrightCol">
+        <p>Copyright ©{% now 'Y' %} All rights reserved.</p>
+        </div>
+    </div>
+    </div>
+</footer>
+<!-- ================================
+End Footer
+================================= -->
